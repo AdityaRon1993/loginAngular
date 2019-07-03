@@ -1,0 +1,23 @@
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    align-items: center;
+}
+
+input {
+    border: 1px solid rgba(73, 73, 236, 0.849);
+    grid-column: 2/-1
+}
+
+button {
+    grid-column: 3;
+    padding: 5px, 15px;
+}
+p{
+    grid-column: 2/-2
+}

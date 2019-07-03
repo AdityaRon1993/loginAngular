@@ -1,0 +1,26 @@
+<div class="contain">
+    <form [formGroup]="loginForm" (ngSubmit)='doLogin(loginForm.value)'>
+
+        <label>
+            Email Id:
+        </label>
+        <input type="email" formControlName="emailId" required>
+
+        <label>
+            Password:
+        </label>
+        <input type="password" formControlName="password" required>
+
+        <button class="btn btn-outline-primary" type="submit" [disabled]='!loginForm.valid'>Login</button>
+        
+         <small *ngIf='emailId.touched && !flag'>{{err}}</small>
+    </form>
+    
+    <!-- {{loginForm.value | json}} <br> 
+    {{loginForm.valid | json}} <br> 
+    {{loginForm.value.emailId | json}} <br> 
+    {{loginForm.value.password | json}} <br>
+    {{data | json}}
+    {{flag}}
+    {{emailId.touched}} -->
+</div>

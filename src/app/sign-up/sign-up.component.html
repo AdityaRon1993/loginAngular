@@ -1,0 +1,28 @@
+<div class="contain">
+    <form [formGroup]="signUpForm">
+
+        <label>
+            Name:
+        </label>
+        <input type="text" formControlName="name" required>
+
+        <label>
+            team:
+        </label>
+        <input type="text" formControlName="team" required>
+
+        <label>
+            age:
+        </label>
+        <input type="number" formControlName="age" required>
+
+        <label>
+            email:
+        </label>
+        <input type="email" formControlName="emailId" required>
+
+        <button class="btn btn-outline-primary" type="submit" [disabled]='!signUpForm.valid'>Sign Up</button>
+        <p class="text-muted">Your password will be your team name</p>
+    </form>
+    <!-- <button class="btn btn-primary" (click)='wirtedata()'>Test</button> -->
+</div>

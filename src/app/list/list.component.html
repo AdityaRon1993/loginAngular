@@ -1,0 +1,20 @@
+<br>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Team</th>
+            <th scope="col">Age</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let ele of displayData'>
+            <th scope="row"><a routerLink='a'>{{ele.name}}</a></th>
+            <td>{{ele.team}}</td>
+            <td>{{ele.age}}</td>
+            <td>{{ele.email}}</td>
+        </tr>
+    </tbody>
+    {{status}}
