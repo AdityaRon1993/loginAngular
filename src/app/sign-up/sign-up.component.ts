@@ -27,7 +27,7 @@ export class SignUpComponent implements OnInit {
       'age' : '123',
       'email': "test"
     }
-    this.data.write(testdata)
+    
     this.data.getData().subscribe((res)=> console.log(res))
   }
 }

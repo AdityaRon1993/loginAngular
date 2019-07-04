@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     
     this.flag=(this.data.some((ele) => ele.email == a.emailId && ele.team == a.password))
     if (this.flag) {
-      this.service.updateLoginValue(true);
+      this.service.updateLogInStatus(true);
       this.route.navigate(['/home']);
     }
     else{

@@ -2,3 +2,12 @@ ul{
     display: grid;
     grid-template-columns: repeat(20,1fr)
 }
+#login{
+    grid-column: -2/-4;
+}
+#signup{
+    grid-column: -1/-2;
+}
+#logOut{
+    grid-column: -1/-3;
+}

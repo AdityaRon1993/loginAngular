@@ -9,6 +9,7 @@ import { Router } from '@angular/router'
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  status
   displayData:any;
   constructor(private data : GetDataService,
     private route : Router) { 
@@ -18,8 +19,8 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.data.getData().subscribe((res)=>this.displayData=res)
     console.log(this.displayData)
-    let status=this.data.getLoginValue()
-    if(!status){
+    this.data.currentLogInStatus.subscribe((a)=>this.status=a)
+    if(!this.status){
       this.route.navigate(['/login'])
     }
     console.log(status)

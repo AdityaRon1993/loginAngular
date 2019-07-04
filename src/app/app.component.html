@@ -13,7 +13,7 @@
     <li class="nav-item" id='signup' *ngIf='!show'>
       <a class="nav-link active" routerLink='signup' >SignUp</a>
     </li>
-    <li class="nav-item" id='signup' *ngIf='show'>
+    <li class="nav-item" id='logOut' *ngIf='show'>
       <button class="btn btn-danger" (click)='logOut()'>Log Out</button>
     </li>
   </ul>
@@ -22,5 +22,5 @@
 <div class="container">
   <!-- <app-login></app-login> -->
   <!-- <app-sign-up></app-sign-up> -->
-  <router-outlet (change)='changeUI()'></router-outlet>
+  <router-outlet></router-outlet>
 </div>

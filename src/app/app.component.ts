@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from './get-data.service';
+import { Router, Route } from '@angular/router'
 
 
 @Component({
@@ -10,18 +11,17 @@ import { GetDataService } from './get-data.service';
 export class AppComponent implements OnInit {
   title = 'IncredProject';
   show
-  constructor(private data: GetDataService) {
+  constructor(private data: GetDataService, private route : Router) {
 
   }
   ngOnInit() {
+    this.data.currentLogInStatus.subscribe((a)=> this.show=a)
 
   }
-  changeUI() {
-    this.show = this.data.getLoginValue()
-    console.log(this.show)
-  }
+  
   logOut() {
-    this.data.updateLoginValue(false)
+    this.data.updateLogInStatus(false);
+    this.route.navigate(['/login'])
   }
 
 }
